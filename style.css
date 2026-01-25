@@ -77,7 +77,7 @@ h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("/images/quadro.jpg") no-repeat center/cover;
+    background: url("/ResidenzaIDogi/images/quadro.jpg") no-repeat center/cover;
     z-index: 1;
     animation: scale 15s infinite alternate; /* velocità aumentata */
     transform-origin: center;
@@ -385,7 +385,7 @@ h2 {
     position: relative;
     width: 100%;
     height: 100vh;
-    background-image: url("/images/dettaglio_mensola.jpg");
+    background-image: url("/ResidenzaIDogi/images/dettaglio_mensola.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
