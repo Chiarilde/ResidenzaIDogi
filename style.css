@@ -79,8 +79,9 @@ h6 {
     height: 100%;
     background-image: url("./images/quadro.jpg");
     background-position: center;
-    background-size: cover;
+
     background-repeat: no-repeat;
+    background-size: cover;
     z-index: 1;
     animation: scale 15s infinite alternate; /* velocità aumentata */
     transform-origin: center;
