@@ -1,0 +1,576 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: "Bodoni";
+}
+body {
+    background-color: #efe6d8;
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+.section-1 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+#intro-location {
+    width: 80%;
+    margin: auto;
+    background-color: #faf7f2;
+}
+h3 {
+    font-size: 25px;
+
+    text-align: center;
+    font-family: "Bodoni Moda";
+    font-style: italic;
+    padding: 2%;
+    color: black;
+}
+h5 {
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    font-family: "Bodoni Moda";
+    font-style: italic;
+    padding: 2%;
+    color: black;
+}
+h6 {
+    font-size: 18px;
+    text-align: center;
+    font-family: "Bodoni Moda", cursive;
+
+    color: black;
+}
+#descrizioni-ristoranti {
+    margin-top: 8%;
+}
+#descrizioni-ristoranti p {
+    font-size: 15px;
+    text-align: center;
+    font-family: "Bodoni Moda";
+    font-style: normal;
+    padding: 1%;
+    color: black;
+}
+#residenza {
+    scroll-margin-top: 160px;
+    position: relative;
+}
+#contact {
+    scroll-margin-top: 100px; /* altezza header */
+}
+
+/* immagine animata */
+.bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("/images/quadro.jpg") no-repeat center/cover;
+    z-index: 1;
+    animation: scale 15s infinite alternate; /* velocità aumentata */
+    transform-origin: center;
+}
+
+/* navbar e contenuti sopra tutto */
+.navbar-wrapper,
+.navbar,
+.gradient-box-bottom {
+    position: relative;
+    z-index: 3;
+}
+
+/* animazione scale */
+@keyframes scale {
+    0% {
+        transform: scale(1.01); /* meno ingrandita all’inizio */
+    }
+    100% {
+        transform: scale(1); /* dimensione finale */
+    }
+}
+
+#loading-screen {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background: black; /* colore di fallback */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 2s ease; /* 👈 sparisce con calma */
+    pointer-events: none;
+}
+
+#loading-screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* riempie tutto il viewport */
+}
+
+/* stato finale */
+#loading-screen.fade-out {
+    opacity: 0;
+}
+
+.navbar-wrapper {
+    display: flex;
+    justify-content: center;
+    z-index: 3;
+    position: fixed;
+    width: 100%;
+}
+.navbar-wrapper-location {
+    display: flex;
+    justify-content: center;
+    z-index: 3;
+    width: 100%;
+    background: linear-gradient(
+        to top,
+        rgba(255, 255, 255, 0.85) 0%,
+        rgba(255, 255, 255, 1) 100%
+    );
+}
+
+.navbar-wrapper.scrolled {
+    background: linear-gradient(
+        to top,
+        rgba(255, 255, 255, 0.85) 0%,
+        rgba(255, 255, 255, 1) 100%
+    );
+}
+.container-location {
+    background-color: #faf7f2;
+}
+.navbar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.logo {
+    height: 160px;
+    width: 150px;
+}
+.items {
+    position: relative;
+}
+.items a {
+    color: #aa7f2e;
+    font-family: "Bodoni", cursive;
+    font-size: 2.4rem;
+    height: 100%;
+    padding: 2rem;
+}
+.items i {
+    font-size: 1.3rem;
+    margin-left: 0.3rem;
+    transition: transform 0.3s;
+}
+
+.items a:hover i {
+    transform: rotateZ(90deg);
+}
+.nav-divider {
+    position: absolute;
+    bottom: -5px; /* distanza sotto i link */
+    left: 0;
+    height: 3px;
+    width: 0;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #c9a24d,
+        #ffd700,
+        #c9a24d,
+        transparent
+    );
+    transition:
+        left 0.3s ease,
+        width 0.3s ease;
+    pointer-events: none;
+}
+
+.navbar .btn {
+    font-size: 15px;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    width: 10rem;
+    border: none;
+    cursor: pointer;
+    background-color: #aa7f2e;
+    color: white;
+    margin-right: 30px;
+}
+
+.btn:hover {
+    background-color: #2f3a3f;
+    color: white;
+}
+
+.gradient-box-top {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%; /* Modifica la larghezza se necessario */
+    height: 300px; /* Modifica l'altezza se necessario */
+    background: linear-gradient(
+        to top,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 100%
+    );
+}
+.gradient-box-bottom {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    width: 100%; /* Modifica la larghezza se necessario */
+    height: 300px; /* Modifica l'altezza se necessario */
+    background: linear-gradient(
+        to bottom,
+        rgba(239, 230, 216, 0) 0%,
+        rgba(239, 230, 216, 0.4) 40%,
+        rgba(239, 230, 216, 0.8) 70%,
+        #efe6d8 100%
+    );
+}
+
+.gradient-box-bottom2 {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%; /* Modifica la larghezza se necessario */
+    height: 100px; /* Modifica l'altezza se necessario */
+    background: linear-gradient(
+        to bottom,
+        #efe6d8 0%,
+        rgba(239, 230, 216, 0.8) 30%,
+        rgba(239, 230, 216, 0.4) 60%,
+        rgba(239, 230, 216, 0) 100%
+    );
+}
+.nav-divider {
+    position: absolute;
+    bottom: -8px; /* distanza sotto i link */
+    left: 0;
+    height: 2px;
+    width: 0; /* sarà gestita dal JS */
+    margin: 0; /* niente auto: è absolute */
+    background: linear-gradient(
+        to right,
+        transparent,
+        #c9a24d,
+        #ffd700,
+        #c9a24d,
+        transparent
+    );
+    transition:
+        left 0.4s ease,
+        width 0.4s ease;
+    pointer-events: none; /* non interferisce coi click */
+}
+
+.descrizioni {
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    opacity: 1;
+    padding: 3rem 3rem 0 3rem;
+}
+
+.descrizioni img {
+    border-radius: 2px;
+    width: 100%;
+}
+.descrizioni h2 {
+    font-size: 25px;
+    text-align: center;
+    font-family: "Bodoni Moda";
+    padding: 2%;
+    color: black;
+}
+.descrizioni p {
+    font-size: 20px;
+    text-align: center;
+    font-family: "Bodoni Moda";
+    padding: 2%;
+    color: black;
+}
+#location {
+    line-height: 34px;
+}
+
+#abbellimento {
+    position: absolute;
+    bottom: 20%;
+    right: 45%;
+    width: 70px;
+    height: 70px;
+    transform: rotate(-45deg);
+}
+#appartamento {
+    position: relative;
+}
+.main-pic {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+#main-pic {
+    margin-top: 90px;
+    width: 90%;
+    border-radius: 2px;
+}
+.intro {
+    position: relative;
+}
+
+.intro p,
+.detail p {
+    font-size: 22px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: "Bodoni Moda";
+    font-style: italic;
+    color: #aa7f2e;
+    z-index: 20;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: "Bodoni", cursive;
+    font-style: italic;
+    color: #aa7f2e;
+    margin-top: 5%;
+    z-index: 20;
+}
+h2 {
+    font-size: 30px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: "Bodoni", cursive;
+    font-style: italic;
+    padding-bottom: 2.5%;
+    color: #aa7f2e;
+    z-index: 20;
+}
+
+.contact {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(/images/dettaglio_mensola.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contact-wrapper {
+    width: 50%;
+    height: 400px;
+    display: flex;
+    border-radius: 2%;
+    box-shadow: 0 3rem 7rem rgba(0, 0, 0, 0.5);
+}
+.contact-left {
+    width: 35%;
+    border-radius: 2% 0 0 2%;
+    background-color: #b28839;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contact-right {
+    width: 65%;
+    border-radius: 0 2% 2% 0;
+    background-color: #eee8;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+.contact-right i {
+    color: #a52a2a;
+    font-size: 5rem;
+    padding-bottom: 0.9rem;
+}
+.contact-left h3,
+.contact-right h3 {
+    font-family: "Bodoni", cursive;
+    font-size: 2.5rem;
+    color: #2f3a3f;
+}
+.contact-left h3 {
+    color: white;
+}
+.contact-left p {
+    color: #fff;
+    font-size: 2rem;
+    font-family: "Bodoni", cursive;
+}
+.contact-right p {
+    color: black;
+    font-size: 2rem;
+    font-family: "Bodoni", cursive;
+    margin: 0.1em;
+}
+.contact-right .btn {
+    font-size: 15px;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    width: 10rem;
+    border: none;
+    cursor: pointer;
+    background-color: #aa7f2e;
+    color: white;
+    margin-top: 2%;
+}
+
+.contact-right .btn:hover {
+    background-color: #2f3a3f;
+    color: white;
+}
+
+/* Keyframes animazione */
+@keyframes scale {
+    0% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.cornice img {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    bottom: -90px;
+    left: 80px;
+}
+#cornice-location img {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    bottom: -50px;
+    left: -90px;
+}
+#cornice2-location img {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    bottom: 10px;
+    right: -90px;
+}
+.cornice2 img {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: -20px;
+    right: 50px;
+    transform: rotate(180deg);
+}
+.gold-divider {
+    border: none;
+    height: 2px;
+    width: 50%;
+    margin: 50px auto;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #c9a24d,
+        #ffd700,
+        #c9a24d,
+        transparent
+    );
+}
+.gold-divider2 {
+    border: none;
+    height: 2px;
+    width: 20%;
+    margin: 50px auto;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #c9a24d,
+        #ffd700,
+        #c9a24d,
+        transparent
+    );
+}
+img .decoration {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    bottom: 0;
+}
+footer {
+    display: flex;
+    position: absolute;
+    bottom: 2%;
+    font-family: "Bodoni", cursive;
+    font-size: 13px;
+    color: #4f4f4f;
+}
+.zoom-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.zoom-image .image {
+    object-fit: cover;
+    filter: blur(10px); /* Immagine inizialmente sfocata */
+    transform: scale(1.2); /* Ingrandisci leggermente l'immagine */
+    transition: all 1s ease-out; /* Transizione per l'effetto di zoom e chiarezza */
+}
+
+/* Quando l'immagine diventa visibile */
+.zoom-image.visible .image {
+    filter: blur(0); /* Rimuove il blur */
+    transform: scale(1); /* Riporta l'immagine alla dimensione originale */
+}
+.grid-item {
+    align-items: center;
+    align-content: center;
+    line-height: 1.9;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
+}
+
+.grid-item.visible {
+    opacity: 1;
+    transform: translateY(0); /* Animazione del testo */
+}
