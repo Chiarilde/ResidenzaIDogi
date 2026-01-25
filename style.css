@@ -26,9 +26,8 @@ html {
     margin: auto;
     background-color: #faf7f2;
 }
-h3 {
+#h3-location {
     font-size: 25px;
-
     text-align: center;
     font-family: "Bodoni Moda";
     font-style: italic;
@@ -79,7 +78,6 @@ h6 {
     height: 100%;
     background-image: url("./images/quadro.jpg");
     background-position: center;
-
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 1;
