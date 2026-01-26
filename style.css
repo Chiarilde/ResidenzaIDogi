@@ -32,7 +32,7 @@ html {
     font-family: "Bodoni Moda";
     font-style: italic;
 
-    color: black;
+    color: #1c1c1c;
 }
 h5 {
     font-size: 20px;
@@ -41,14 +41,14 @@ h5 {
     font-family: "Bodoni Moda";
     font-style: italic;
     padding: 2%;
-    color: black;
+    color: #1c1c1c;
 }
 h6 {
     font-size: 18px;
     text-align: center;
     font-family: "Bodoni Moda", cursive;
 
-    color: black;
+    color: #1c1c1c;
 }
 #descrizioni-ristoranti {
     margin-top: 4%;
@@ -59,7 +59,7 @@ h6 {
     font-family: "Bodoni Moda";
     font-style: normal;
     padding: 1%;
-    color: black;
+    color: #1c1c1c;
 }
 #residenza {
     scroll-margin-top: 160px;
@@ -109,7 +109,7 @@ h6 {
     width: 100vw;
     height: 100vh;
     z-index: 9999;
-    background: black; /* colore di fallback */
+    background: #1c1c1c; /* colore di fallback */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -308,14 +308,14 @@ h6 {
     text-align: center;
     font-family: "Bodoni Moda";
     padding: 2%;
-    color: black;
+    color: #1c1c1c;
 }
 .descrizioni p {
     font-size: 20px;
     text-align: center;
     font-family: "Bodoni Moda";
     padding: 2%;
-    color: black;
+    color: #1c1c1c;
 }
 #location {
     line-height: 34px;
@@ -432,7 +432,7 @@ h2 {
 .contact-right h3 {
     font-family: "Bodoni", cursive;
     font-size: 2.5rem;
-    color: #2f3a3f;
+    color: #1c1c1c;
 }
 .contact-left h3 {
     color: white;
@@ -443,7 +443,7 @@ h2 {
     font-family: "Bodoni", cursive;
 }
 .contact-right p {
-    color: black;
+    color: #1c1c1c;
     font-size: 2rem;
     font-family: "Bodoni", cursive;
     margin: 0.1em;
@@ -461,7 +461,7 @@ h2 {
 }
 
 .contact-right .btn:hover {
-    background-color: #2f3a3f;
+    background-color: #1c1c1c;
     color: white;
 }
 
