@@ -31,7 +31,7 @@ html {
     text-align: center;
     font-family: "Bodoni Moda";
     font-style: italic;
-    padding: 2%;
+
     color: black;
 }
 h5 {
@@ -51,7 +51,7 @@ h6 {
     color: black;
 }
 #descrizioni-ristoranti {
-    margin-top: 8%;
+    margin-top: 4%;
 }
 #descrizioni-ristoranti p {
     font-size: 15px;
