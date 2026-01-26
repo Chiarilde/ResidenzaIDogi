@@ -309,9 +309,18 @@ h6 {
     font-family: "Bodoni Moda";
     padding: 2%;
     color: #1c1c1c;
+    font-style: normal;
+}
+#h2-location {
+    font-size: 25px;
+    font-style: normal;
+    font-family: "Bodoni Moda";
+
+    padding-bottom: 2.5%;
+    color: #aa7f2e;
 }
 .descrizioni p {
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     font-family: "Bodoni Moda";
     padding: 2%;
