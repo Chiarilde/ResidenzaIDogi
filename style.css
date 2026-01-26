@@ -405,7 +405,7 @@ h2 {
 }
 .contact-left {
     width: 35%;
-    border-radius: 2% 0 0 2%;
+    border-radius: 2px 0 0 2px;
     background-color: #b28839;
     background-size: cover;
     display: flex;
@@ -415,7 +415,7 @@ h2 {
 }
 .contact-right {
     width: 65%;
-    border-radius: 0 2% 2% 0;
+    border-radius: 0 2px 2px 0;
     background-color: #eee8;
     display: flex;
     flex-direction: column;
@@ -461,7 +461,7 @@ h2 {
 }
 
 .contact-right .btn:hover {
-    background-color: #1c1c1c;
+    background-color: #2f3a3f;
     color: white;
 }
 
@@ -517,6 +517,18 @@ h2 {
         transparent
     );
 }
+.border {
+    width: 2px; /* ora è verticale */
+    border: linear-gradient(
+        to bottom,
+        transparent,
+        #c9a24d,
+        #ffd700,
+        #c9a24d,
+        transparent
+    );
+}
+
 .gold-divider2 {
     border: none;
     height: 2px;
@@ -531,6 +543,7 @@ h2 {
         transparent
     );
 }
+
 img .decoration {
     position: absolute;
     height: 10px;
