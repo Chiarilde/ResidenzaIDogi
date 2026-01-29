@@ -47,15 +47,19 @@ images.forEach((item) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    const links = document.querySelectorAll(".navbar .items a");
+    // SOLO link con hash (esclude logo o link esterni)
+    const links = document.querySelectorAll(".navbar .items a[href^='#']");
     const divider = document.querySelector(".navbar .nav-divider");
     const items = document.querySelector(".navbar .items");
-    let activeLink =
-        document.querySelector(".navbar .items a.active") || links[0];
+
+    let activeLink = links[0];
 
     function moveDivider(link) {
+        if (!link) return;
+
         const linkRect = link.getBoundingClientRect();
         const itemsRect = items.getBoundingClientRect();
+
         divider.style.width = `${linkRect.width}px`;
         divider.style.left = `${linkRect.left - itemsRect.left}px`;
     }
@@ -63,33 +67,71 @@ document.addEventListener("DOMContentLoaded", () => {
     // Posizione iniziale
     moveDivider(activeLink);
 
+    // ======================
+    // HOVER + CLICK
+    // ======================
     links.forEach((link) => {
-        // Hover -> divider segue il mouse
-        link.addEventListener("mouseenter", () => moveDivider(link));
+        link.addEventListener("mouseenter", () => {
+            moveDivider(link);
+        });
 
-        // Mouse leave -> torna al link attivo
-        link.addEventListener("mouseleave", () => moveDivider(activeLink));
+        link.addEventListener("mouseleave", () => {
+            moveDivider(activeLink);
+        });
 
-        // Click -> aggiorna link attivo e gestisce scroll
         link.addEventListener("click", (e) => {
             const href = link.getAttribute("href");
 
-            // Aggiorna active link e divider
             links.forEach((l) => l.classList.remove("active"));
             link.classList.add("active");
             activeLink = link;
             moveDivider(link);
 
-            // Se è un link interno (#), scorri senza ricaricare
             if (href.startsWith("#")) {
                 e.preventDefault();
                 const target = document.querySelector(href);
-                if (target) target.scrollIntoView({ behavior: "smooth" });
+                if (target) {
+                    target.scrollIntoView({ behavior: "smooth" });
+                }
             }
-            // Altrimenti lascia fare il normale comportamento del link (nuova pagina)
         });
     });
 
-    // Adatta il divider se la finestra cambia dimensione
-    window.addEventListener("resize", () => moveDivider(activeLink));
+    // ======================
+    // SCROLL (IntersectionObserver)
+    // ======================
+    const sections = document.querySelectorAll("section[id]");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+
+                const id = entry.target.id;
+                const newActiveLink = document.querySelector(
+                    `.navbar .items a[href="#${id}"]`,
+                );
+
+                if (!newActiveLink || newActiveLink === activeLink) return;
+
+                links.forEach((l) => l.classList.remove("active"));
+                newActiveLink.classList.add("active");
+                activeLink = newActiveLink;
+                moveDivider(newActiveLink);
+            });
+        },
+        {
+            rootMargin: "-40% 0px -40% 0px",
+            threshold: 0,
+        },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    // ======================
+    // RESIZE
+    // ======================
+    window.addEventListener("resize", () => {
+        moveDivider(activeLink);
+    });
 });
