@@ -5,7 +5,7 @@
     outline: none;
     list-style-type: none;
     text-decoration: none;
-    font-family: "Bodoni";
+    font-family: "Bodoni", serif;
 }
 body {
     background-color: #efe6d8;
@@ -32,7 +32,7 @@ html {
     font-family: "Bodoni Moda";
     font-style: italic;
 
-    color: #1c1c1c;
+    color: #aa7f2e;
 }
 h5 {
     font-size: 20px;
@@ -41,14 +41,14 @@ h5 {
     font-family: "Bodoni Moda";
     font-style: italic;
     padding: 2%;
-    color: #1c1c1c;
+    color: #aa7f2e;
 }
 h6 {
     font-size: 18px;
     text-align: center;
     font-family: "Bodoni Moda", cursive;
 
-    color: #1c1c1c;
+    color: #aa7f2e;
 }
 #descrizioni-ristoranti {
     margin-top: 4%;
@@ -59,8 +59,9 @@ h6 {
     font-family: "Bodoni Moda";
     font-style: normal;
     padding: 1%;
-    color: #1c1c1c;
+    color: #aa7f2e;
 }
+
 #residenza {
     scroll-margin-top: 160px;
     position: relative;
@@ -177,6 +178,7 @@ h6 {
 .items a {
     color: #aa7f2e;
     font-family: "Bodoni", cursive;
+
     font-size: 2.4rem;
     height: 100%;
     padding: 2rem;
@@ -211,7 +213,7 @@ h6 {
 }
 
 .navbar .btn {
-    font-size: 15px;
+    font-size: 17px;
     border-radius: 0.3rem;
     padding: 1rem;
     width: 10rem;
@@ -303,16 +305,25 @@ h6 {
     border-radius: 2px;
     width: 100%;
 }
-.descrizioni h2 {
-    font-size: 25px;
+.detail {
+    margin-top: 5%;
+}
+
+.descrizioni h2,
+.detail h2 {
+    font-size: 22px;
     text-align: center;
     font-family: "Bodoni Moda";
-    padding: 2%;
-    color: #1c1c1c;
+    padding: 1%;
+    color: #aa7f2e;
     font-style: normal;
 }
+
+#sottotitolo {
+    font-size: 21px;
+}
 #h2-location {
-    font-size: 25px;
+    font-size: 22px;
     font-style: normal;
     font-family: "Bodoni Moda";
 
@@ -320,11 +331,11 @@ h6 {
     color: #aa7f2e;
 }
 .descrizioni p {
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
     font-family: "Bodoni Moda";
     padding: 2%;
-    color: #1c1c1c;
+    color: #aa7f2e;
 }
 #location {
     line-height: 34px;
@@ -356,7 +367,28 @@ h6 {
 .intro {
     position: relative;
 }
-
+#residence_description {
+    margin-top: 2%;
+}
+#residence_description p {
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+    font-family: "Bodoni Moda";
+    margin-bottom: 5%;
+    color: #aa7f2e;
+}
+#residence_description h2 {
+    font-size: 22px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+    font-family: "Bodoni Moda";
+    color: #aa7f2e;
+}
 .intro p,
 .detail p {
     font-size: 22px;
@@ -368,8 +400,19 @@ h6 {
     color: #aa7f2e;
     z-index: 20;
 }
+.detail-end p {
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+    font-family: "Bodoni Moda";
+    margin-bottom: 5%;
+    color: #aa7f2e;
+}
+
 quote {
-    font-size: 25px;
+    font-size: 24px;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -406,7 +449,7 @@ h2 {
     position: relative;
     width: 100%;
     height: 100vh;
-    background-image: url("./images/panoramica_camera_da_letto.jpg");
+    background-image: url("./images/caminetto.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -468,7 +511,7 @@ h2 {
     margin: 0.1em;
 }
 .contact-right .btn {
-    font-size: 15px;
+    font-size: 17px;
     border-radius: 0.3rem;
     padding: 1rem;
     width: 10rem;
