@@ -48,7 +48,7 @@ images.forEach((item) => {
 
 document.addEventListener("DOMContentLoaded", () => {
     // SOLO link con hash (esclude logo o link esterni)
-    const links = document.querySelectorAll(".navbar .items a[href^='#']");
+    const links = document.querySelectorAll(".navbar .items a");
     const divider = document.querySelector(".navbar .nav-divider");
     const items = document.querySelector(".navbar .items");
 
