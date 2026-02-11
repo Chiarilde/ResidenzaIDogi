@@ -14,6 +14,9 @@ html {
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
+.prenota-mobile {
+    display: none;
+}
 
 .section-1 {
     position: relative;
@@ -31,10 +34,22 @@ html {
 
 /* Le linee devono esistere sempre */
 .hamburger span {
-    width: 30px;
+    width: 40px;
     height: 3px;
     background-color: goldenrod;
     transition: 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
 }
 
 /* MOBILE */
@@ -56,13 +71,117 @@ html {
     .hamburger {
         display: flex;
         margin-left: auto;
+
+        z-index: 1002;
+        cursor: pointer;
+    }
+    /* Solo quando è X (menu aperto) */
+    .hamburger.active {
+        position: fixed; /* fissa in viewport */
+        top: 20px; /* distanza dal bordo superiore */
+        right: 10px; /* distanza dal bordo destro */
+        z-index: 1003; /* sopra il menu */
+    }
+
+    /* Menu chiuso */
+    .items {
+        display: none;
+        flex-direction: column;
+        position: fixed; /* meglio di absolute */
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh; /* full screen */
+        background: white;
+        padding-top: 100px;
+        align-items: center;
+        justify-content: flex-start;
+        z-index: 1001;
+    }
+    #contact > div.contact-wrapper {
+        flex-direction: column;
+        width: 100%;
+     
+       
+
+ 
+}
+    }
+    #contact > div.contact-wrapper > div.contact-left,
+    #contact > div.contact-wrapper > div.contact-right {
+        padding: 3% 0 5% 0;
+    }
+    #residenza
+        > div.detail-end
+        > hr
+        #contact
+        > div.contact-wrapper
+        > div.contact-right
+        > i {
+        font-size: 40px;
+    }
+    #contact > div.contact-wrapper > div.contact-left > img {
+        width: 130px;
+        height: 120px;
+    }
+    #contact > div.contact-wrapper > div.contact-left > h3,
+    #contact > div.contact-wrapper > div.contact-right > h3 {
+        font-size: 20px;
+    }
+    #contact > div.contact-wrapper > div.contact-left > p,
+    #contact > div.contact-wrapper > div.contact-right > p {
+        font-size: 16px;
+    }
+    #contact > div.contact-wrapper > div.contact-left,
+    #contact > div.contact-wrapper > div.contact-right {
+        width: 100%;
+    }
+    #residenza > div.detail-end > hr {
+        margin-bottom: 0;
+    }
+
+    .items.active {
+        display: flex;
+        flex-direction: column;
+
+        position: fixed; /* fondamentale */
+        top: 0;
+        left: 0;
+        width: 100vw; /* 100% viewport width */
+        height: 100vh; /* opzionale: full screen */
+
+        padding: 15% 5%;
+        background: white;
+
         z-index: 1001;
     }
 
-    .items {
+    /* Spazio tra i link */
+    .items.active a {
+        margin: 5px 0;
+        text-decoration: none;
+        padding: 0;
+    }
+
+    #section-1 > nav > nav > nav > a.prenota-mobile > button {
+        margin: 0;
+    }
+
+    /* 🔥 Nasconde PRENOTA desktop */
+    .prenota-link {
         display: none;
     }
 
+    /* 🔥 Mostra PRENOTA mobile (primo elemento) */
+    .prenota-mobile {
+        display: block;
+        margin-bottom: 25px;
+    }
+
+    .contact-wrapper {
+        box-shadow: 0;
+    }
     #location > div:nth-child(2) {
         order: 1;
     }
@@ -94,7 +213,7 @@ html {
         margin-bottom: 0;
     }
 
-    .descrizioni,
+    #descrizioni,
     #location {
         width: 100%;
         position: relative;
@@ -104,6 +223,31 @@ html {
         opacity: 1;
         padding: 3rem 3rem 0 3rem;
     }
+    .cornice,
+    .cornice2 {
+        display: none;
+    }
+    .main-pic #main-pic {
+        margin-top: 0;
+    }
+    #residenza > div.detail > hr {
+        margin-top: 0;
+        margin-bottom: 5%;
+    }
+    #residenza > div.intro > h1 {
+        font-size: 32px;
+    }
+    #residenza > div.intro > h2 {
+        font-size: 26px;
+    }
+    #residenza > div.intro > p,
+    #residenza > div.detail > p,
+    #residence_description > p,
+    #residenza > div.detail-end > p {
+        font-size: 20px;
+        padding: 2%;
+    }
+
     h2,
     #intro-location > h2,
     #h3-location {
