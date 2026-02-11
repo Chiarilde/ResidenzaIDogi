@@ -85,3 +85,11 @@ body::before {
 .right-arrow {
     right: calc(10vw - 65px);
 }
+@media (max-width: 500px) {
+    .right-arrow {
+        right: calc(10vw - 50px);
+    }
+    .left-arrow {
+        left: calc(10vw - 50px);
+    }
+}

@@ -21,6 +21,110 @@ html {
     height: 100vh;
     overflow: hidden;
 }
+.hamburger {
+    display: none;
+    margin-right: 3%;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+/* Le linee devono esistere sempre */
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: goldenrod;
+    transition: 0.3s;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+    #descrizioni-ristoranti > p:nth-child(4),
+    #descrizioni-ristoranti > p:nth-child(6),
+    #descrizioni-ristoranti > p:nth-child(8) {
+        padding: 5%;
+    }
+    #descrizioni-ristoranti > h5 {
+        margin-bottom: 6%;
+    }
+    #descrizioni-ristoranti > h5 {
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    .hamburger {
+        display: flex;
+        margin-left: auto;
+        z-index: 1001;
+    }
+
+    .items {
+        display: none;
+    }
+
+    #location > div:nth-child(2) {
+        order: 1;
+    }
+    #location > div:nth-child(1) {
+        order: 2;
+    }
+    #location > div:nth-child(3) {
+        order: 3;
+    }
+    #location > div:nth-child(4) {
+        order: 4;
+    }
+    #location > div:nth-child(6) {
+        order: 5;
+    }
+    #location > div:nth-child(5) {
+        order: 6;
+    }
+    #location > div:nth-child(10) {
+        order: 7;
+    }
+    #location > div:nth-child(9) {
+        order: 8;
+    }
+    #location .gold-divider {
+        display: none;
+    }
+    hr.gold-divider {
+        margin-bottom: 0;
+    }
+
+    .descrizioni,
+    #location {
+        width: 100%;
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        opacity: 1;
+        padding: 3rem 3rem 0 3rem;
+    }
+    h2,
+    #intro-location > h2,
+    #h3-location {
+        font-size: 23px;
+        padding-bottom: 5%;
+    }
+    p,
+    #intro-location > p,
+    #location p {
+        font-size: 17px;
+    }
+
+    .descrizioni > .zoom-image:nth-of-type(2n) {
+        order: 2;
+    }
+
+    .descrizioni > .grid-item:nth-of-type(2n-1) {
+        order: 1;
+    }
+}
+
 #intro-location {
     width: 80%;
     margin: 5% auto;
