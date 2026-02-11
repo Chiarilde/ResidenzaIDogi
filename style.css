@@ -103,165 +103,166 @@ html {
         flex-direction: column;
         width: 100%;
     }
-}
-#contact > div.contact-wrapper > div.contact-left,
-#contact > div.contact-wrapper > div.contact-right {
-    padding: 3% 0 5% 0;
-}
-#residenza
-    > div.detail-end
-    > hr
-    #contact
-    > div.contact-wrapper
-    > div.contact-right
-    > i {
-    font-size: 40px;
-}
-#contact > div.contact-wrapper > div.contact-left > img {
-    width: 130px;
-    height: 120px;
-}
-#contact > div.contact-wrapper > div.contact-left > h3,
-#contact > div.contact-wrapper > div.contact-right > h3 {
-    font-size: 20px;
-}
-#contact > div.contact-wrapper > div.contact-left > p,
-#contact > div.contact-wrapper > div.contact-right > p {
-    font-size: 16px;
-}
-#contact > div.contact-wrapper > div.contact-left,
-#contact > div.contact-wrapper > div.contact-right {
-    width: 100%;
-}
-#residenza > div.detail-end > hr {
-    margin-bottom: 0;
-}
 
-.items.active {
-    display: flex;
-    flex-direction: column;
+    #contact > div.contact-wrapper > div.contact-left,
+    #contact > div.contact-wrapper > div.contact-right {
+        padding: 3% 0 5% 0;
+    }
+    #residenza
+        > div.detail-end
+        > hr
+        #contact
+        > div.contact-wrapper
+        > div.contact-right
+        > i {
+        font-size: 40px;
+    }
+    #contact > div.contact-wrapper > div.contact-left > img {
+        width: 130px;
+        height: 120px;
+    }
+    #contact > div.contact-wrapper > div.contact-left > h3,
+    #contact > div.contact-wrapper > div.contact-right > h3 {
+        font-size: 20px;
+    }
+    #contact > div.contact-wrapper > div.contact-left > p,
+    #contact > div.contact-wrapper > div.contact-right > p {
+        font-size: 16px;
+    }
+    #contact > div.contact-wrapper > div.contact-left,
+    #contact > div.contact-wrapper > div.contact-right {
+        width: 100%;
+    }
+    #residenza > div.detail-end > hr {
+        margin-bottom: 0;
+    }
 
-    position: fixed; /* fondamentale */
-    top: 0;
-    left: 0;
-    width: 100vw; /* 100% viewport width */
-    height: 100vh; /* opzionale: full screen */
+    .items.active {
+        display: flex;
+        flex-direction: column;
 
-    padding: 15% 5%;
-    background: white;
+        position: fixed; /* fondamentale */
+        top: 0;
+        left: 0;
+        width: 100vw; /* 100% viewport width */
+        height: 100vh; /* opzionale: full screen */
 
-    z-index: 1001;
-}
+        padding: 15% 5%;
+        background: white;
 
-/* Spazio tra i link */
-.items.active a {
-    margin: 5px 0;
-    text-decoration: none;
-    padding: 0;
-}
+        z-index: 1001;
+    }
 
-#section-1 > nav > nav > nav > a.prenota-mobile > button {
-    margin: 0;
-}
+    /* Spazio tra i link */
+    .items.active a {
+        margin: 5px 0;
+        text-decoration: none;
+        padding: 0;
+    }
 
-/* 🔥 Nasconde PRENOTA desktop */
-.prenota-link {
-    display: none;
-}
+    #section-1 > nav > nav > nav > a.prenota-mobile > button {
+        margin: 0;
+    }
 
-/* 🔥 Mostra PRENOTA mobile (primo elemento) */
-.prenota-mobile {
-    display: block;
-    margin-bottom: 25px;
-}
+    /* 🔥 Nasconde PRENOTA desktop */
+    .prenota-link {
+        display: none;
+    }
 
-.contact-wrapper {
-    box-shadow: 0;
-}
-#location > div:nth-child(2) {
-    order: 1;
-}
-#location > div:nth-child(1) {
-    order: 2;
-}
-#location > div:nth-child(3) {
-    order: 3;
-}
-#location > div:nth-child(4) {
-    order: 4;
-}
-#location > div:nth-child(6) {
-    order: 5;
-}
-#location > div:nth-child(5) {
-    order: 6;
-}
-#location > div:nth-child(10) {
-    order: 7;
-}
-#location > div:nth-child(9) {
-    order: 8;
-}
-#location .gold-divider {
-    display: none;
-}
-hr.gold-divider {
-    margin-bottom: 0;
-}
+    /* 🔥 Mostra PRENOTA mobile (primo elemento) */
+    .prenota-mobile {
+        display: block;
+        margin-bottom: 25px;
+    }
 
-#descrizioni,
-#location {
-    width: 100%;
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-    opacity: 1;
-    padding: 3rem 3rem 0 3rem;
-}
-.cornice,
-.cornice2 {
-    display: none;
-}
-.main-pic #main-pic {
-    margin-top: 0;
-}
-#residenza > div.detail > hr {
-    margin-top: 0;
-    margin-bottom: 5%;
-}
-#residenza > div.intro > h1 {
-    font-size: 32px;
-}
-#residenza > div.intro > h2 {
-    font-size: 26px;
-}
-#residenza > div.intro > p,
-#residenza > div.detail > p,
-#residence_description > p,
-#residenza > div.detail-end > p {
-    font-size: 20px;
-    padding: 2%;
-}
+    .contact-wrapper {
+        box-shadow: 0;
+    }
+    #location > div:nth-child(2) {
+        order: 1;
+    }
+    #location > div:nth-child(1) {
+        order: 2;
+    }
+    #location > div:nth-child(3) {
+        order: 3;
+    }
+    #location > div:nth-child(4) {
+        order: 4;
+    }
+    #location > div:nth-child(6) {
+        order: 5;
+    }
+    #location > div:nth-child(5) {
+        order: 6;
+    }
+    #location > div:nth-child(10) {
+        order: 7;
+    }
+    #location > div:nth-child(9) {
+        order: 8;
+    }
+    #location .gold-divider {
+        display: none;
+    }
+    hr.gold-divider {
+        margin-bottom: 0;
+    }
 
-h2,
-#intro-location > h2,
-#h3-location {
-    font-size: 23px;
-    padding-bottom: 5%;
-}
-p,
-#intro-location > p,
-#location p {
-    font-size: 17px;
-}
+    #descrizioni,
+    #location {
+        width: 100%;
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        opacity: 1;
+        padding: 3rem 3rem 0 3rem;
+    }
+    .cornice,
+    .cornice2 {
+        display: none;
+    }
+    .main-pic #main-pic {
+        margin-top: 0;
+    }
+    #residenza > div.detail > hr {
+        margin-top: 0;
+        margin-bottom: 5%;
+    }
+    #residenza > div.intro > h1 {
+        font-size: 32px;
+    }
+    #residenza > div.intro > h2 {
+        font-size: 26px;
+    }
+    #residenza > div.intro > p,
+    #residenza > div.detail > p,
+    #residence_description > p,
+    #residenza > div.detail-end > p {
+        font-size: 20px;
+        padding: 2%;
+    }
 
-.descrizioni > .zoom-image:nth-of-type(2n) {
-    order: 2;
-}
+    h2,
+    #intro-location > h2,
+    #h3-location {
+        font-size: 23px;
+        padding-bottom: 5%;
+    }
+    p,
+    #intro-location > p,
+    #location p {
+        font-size: 17px;
+    }
 
-.descrizioni > .grid-item:nth-of-type(2n-1) {
-    order: 1;
+    .descrizioni > .zoom-image:nth-of-type(2n) {
+        order: 2;
+    }
+
+    .descrizioni > .grid-item:nth-of-type(2n-1) {
+        order: 1;
+    }
 }
 
 #intro-location {
