@@ -45,3 +45,33 @@ document.addEventListener("DOMContentLoaded", () => {
     // Adatta il divider se la finestra cambia dimensione
     window.addEventListener("resize", () => moveDivider(activeLink));
 });
+
+const hamburger = document.querySelector(".hamburger");
+const items = document.querySelector(".items");
+
+// toggle menu
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    items.classList.toggle("active");
+});
+
+// Gestione click sui link del menu
+document.querySelectorAll(".items a").forEach((link) => {
+    link.addEventListener("click", function (e) {
+        const href = this.getAttribute("href");
+        const target = document.querySelector(href);
+
+        // Chiudi sempre il menu mobile
+        hamburger.classList.remove("active");
+        items.classList.remove("active");
+
+        // Se link è hash e la sezione esiste nella pagina → scroll smooth
+        if (href.startsWith("#") && target) {
+            e.preventDefault(); // previeni navigazione predefinita
+            target.scrollIntoView({ behavior: "smooth" });
+        }
+
+        // Se la sezione non esiste o link è esterno → lascia fare al browser
+        // In questo modo i link verso altre pagine funzionano
+    });
+});

@@ -52,219 +52,6 @@ html {
     transform: translateY(-9px) rotate(-45deg);
 }
 
-/* MOBILE */
-@media (max-width: 900px) {
-    #descrizioni-ristoranti > p:nth-child(4),
-    #descrizioni-ristoranti > p:nth-child(6),
-    #descrizioni-ristoranti > p:nth-child(8) {
-        padding: 5%;
-    }
-    #descrizioni-ristoranti > h5 {
-        margin-bottom: 6%;
-    }
-    #descrizioni-ristoranti > h5 {
-        padding-bottom: 0;
-    }
-}
-
-@media (max-width: 1200px) {
-    .hamburger {
-        display: flex;
-        margin-left: auto;
-
-        z-index: 1002;
-        cursor: pointer;
-    }
-    /* Solo quando è X (menu aperto) */
-    .hamburger.active {
-        position: fixed; /* fissa in viewport */
-        top: 20px; /* distanza dal bordo superiore */
-        right: 10px; /* distanza dal bordo destro */
-        z-index: 1003; /* sopra il menu */
-    }
-
-    /* Menu chiuso */
-    .items {
-        display: none;
-        flex-direction: column;
-        position: fixed; /* meglio di absolute */
-        top: 0;
-        right: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh; /* full screen */
-        background: white;
-        padding-top: 100px;
-        align-items: center;
-        justify-content: flex-start;
-        z-index: 1001;
-    }
-    #contact > div.contact-wrapper {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    #contact > div.contact-wrapper > div.contact-left,
-    #contact > div.contact-wrapper > div.contact-right {
-        padding: 3% 0 5% 0;
-    }
-    #residenza
-        > div.detail-end
-        > hr
-        #contact
-        > div.contact-wrapper
-        > div.contact-right
-        > i {
-        font-size: 40px;
-    }
-    #contact > div.contact-wrapper > div.contact-left > img {
-        width: 130px;
-        height: 120px;
-    }
-    #contact > div.contact-wrapper > div.contact-left > h3,
-    #contact > div.contact-wrapper > div.contact-right > h3 {
-        font-size: 20px;
-    }
-    #contact > div.contact-wrapper > div.contact-left > p,
-    #contact > div.contact-wrapper > div.contact-right > p {
-        font-size: 16px;
-    }
-    #contact > div.contact-wrapper > div.contact-left,
-    #contact > div.contact-wrapper > div.contact-right {
-        width: 100%;
-    }
-    #residenza > div.detail-end > hr {
-        margin-bottom: 0;
-    }
-
-    .items.active {
-        display: flex;
-        flex-direction: column;
-
-        position: fixed; /* fondamentale */
-        top: 0;
-        left: 0;
-        width: 100vw; /* 100% viewport width */
-        height: 100vh; /* opzionale: full screen */
-
-        padding: 15% 5%;
-        background: white;
-
-        z-index: 1001;
-    }
-
-    /* Spazio tra i link */
-    .items.active a {
-        margin: 5px 0;
-        text-decoration: none;
-        padding: 0;
-    }
-
-    #section-1 > nav > nav > nav > a.prenota-mobile > button {
-        margin: 0;
-    }
-
-    /* 🔥 Nasconde PRENOTA desktop */
-    .prenota-link {
-        display: none;
-    }
-
-    /* 🔥 Mostra PRENOTA mobile (primo elemento) */
-    .prenota-mobile {
-        display: block;
-        margin-bottom: 25px;
-    }
-
-    .contact-wrapper {
-        box-shadow: 0;
-    }
-    #location > div:nth-child(2) {
-        order: 1;
-    }
-    #location > div:nth-child(1) {
-        order: 2;
-    }
-    #location > div:nth-child(3) {
-        order: 3;
-    }
-    #location > div:nth-child(4) {
-        order: 4;
-    }
-    #location > div:nth-child(6) {
-        order: 5;
-    }
-    #location > div:nth-child(5) {
-        order: 6;
-    }
-    #location > div:nth-child(10) {
-        order: 7;
-    }
-    #location > div:nth-child(9) {
-        order: 8;
-    }
-    #location .gold-divider {
-        display: none;
-    }
-    hr.gold-divider {
-        margin-bottom: 0;
-    }
-
-    #descrizioni,
-    #location {
-        width: 100%;
-        position: relative;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 10px;
-        opacity: 1;
-        padding: 3rem 3rem 0 3rem;
-    }
-    .cornice,
-    .cornice2 {
-        display: none;
-    }
-    .main-pic #main-pic {
-        margin-top: 0;
-    }
-    #residenza > div.detail > hr {
-        margin-top: 0;
-        margin-bottom: 5%;
-    }
-    #residenza > div.intro > h1 {
-        font-size: 32px;
-    }
-    #residenza > div.intro > h2 {
-        font-size: 26px;
-    }
-    #residenza > div.intro > p,
-    #residenza > div.detail > p,
-    #residence_description > p,
-    #residenza > div.detail-end > p {
-        font-size: 20px;
-        padding: 2%;
-    }
-
-    h2,
-    #intro-location > h2,
-    #h3-location {
-        font-size: 23px;
-        padding-bottom: 5%;
-    }
-    p,
-    #intro-location > p,
-    #location p {
-        font-size: 17px;
-    }
-
-    .descrizioni > .zoom-image:nth-of-type(2n) {
-        order: 2;
-    }
-
-    .descrizioni > .grid-item:nth-of-type(2n-1) {
-        order: 1;
-    }
-}
-
 #intro-location {
     width: 80%;
     margin: 5% auto;
@@ -279,7 +66,7 @@ html {
     color: #aa7f2e;
 }
 h5 {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: normal;
     text-align: center;
     font-family: "Bodoni Moda";
@@ -336,6 +123,9 @@ h6 {
 .gradient-box-bottom {
     position: relative;
     z-index: 3;
+}
+hr #gold-divider-mobile {
+    display: none;
 }
 
 /* animazione scale */
@@ -661,7 +451,7 @@ quote {
     text-align: center;
     align-items: center;
     justify-content: center;
-    font-family: "Bodoni Moda";
+    font-family: "Bodoni";
     font-style: italic;
     font-weight: bold;
     color: #aa7f2e;
@@ -672,18 +462,19 @@ h1 {
     text-align: center;
     align-items: center;
     justify-content: center;
-    font-family: "Bodoni", cursive;
+    font-family: "Bodoni";
     font-style: italic;
     color: #aa7f2e;
     margin-top: 10%;
     z-index: 20;
+    padding-bottom: 1%;
 }
 h2 {
-    font-size: 30px;
+    font-size: 25px;
     text-align: center;
     align-items: center;
     justify-content: center;
-    font-family: "Bodoni", cursive;
+    font-family: "Bodoni Moda";
     font-style: italic;
     padding-bottom: 2.5%;
     color: #aa7f2e;
@@ -811,7 +602,7 @@ h2 {
     right: -90px;
 }
 
-.gold-divider {
+hr.gold-divider {
     border: none;
     height: 2px;
     width: 50%;
@@ -837,7 +628,7 @@ h2 {
     );
 }
 
-.gold-divider2 {
+/* .gold-divider2 {
     border: none;
     height: 2px;
     width: 20%;
@@ -850,7 +641,7 @@ h2 {
         #c9a24d,
         transparent
     );
-}
+} */
 
 img .decoration {
     position: absolute;
@@ -902,4 +693,271 @@ footer {
     justify-content: center;
     width: 100%;
     margin-top: 5%;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+    #descrizioni-ristoranti > p:nth-child(4),
+    #descrizioni-ristoranti > p:nth-child(6),
+    #descrizioni-ristoranti > p:nth-child(8) {
+        padding: 5%;
+    }
+    #descrizioni-ristoranti > h5 {
+        margin-bottom: 6%;
+    }
+    #descrizioni-ristoranti > h5 {
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    .hamburger {
+        display: flex;
+        margin-left: auto;
+        z-index: 1002;
+        cursor: pointer;
+    }
+    /* Solo quando è X (menu aperto) */
+    .hamburger.active {
+        position: fixed; /* fissa in viewport */
+        top: 20px; /* distanza dal bordo superiore */
+        right: 2px; /* distanza dal bordo destro */
+        z-index: 1003; /* sopra il menu */
+    }
+
+    /* Menu chiuso */
+    .items {
+        display: none;
+        flex-direction: column;
+        position: fixed; /* meglio di absolute */
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh; /* full screen */
+        background: white;
+        padding-top: 100px;
+        align-items: center;
+        justify-content: flex-start;
+        z-index: 1001;
+    }
+    #contact > div.contact-wrapper {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #contact > div.contact-wrapper > div.contact-left,
+    #contact > div.contact-wrapper > div.contact-right {
+        padding: 3% 0 5% 0;
+    }
+    #residenza
+        > div.detail-end
+        > hr
+        #contact
+        > div.contact-wrapper
+        > div.contact-right
+        > i {
+        font-size: 40px;
+    }
+    #contact > div.contact-wrapper > div.contact-left > img {
+        width: 130px;
+        height: 120px;
+    }
+    #contact > div.contact-wrapper > div.contact-left > h3,
+    #contact > div.contact-wrapper > div.contact-right > h3 {
+        font-size: 20px;
+    }
+    #contact > div.contact-wrapper > div.contact-left > p,
+    #contact > div.contact-wrapper > div.contact-right > p {
+        font-size: 18px;
+    }
+
+    #contact > div.contact-wrapper > div.contact-left,
+    #contact > div.contact-wrapper > div.contact-right {
+        width: 100%;
+    }
+    #residenza > div.detail-end > hr {
+        margin-bottom: 0;
+    }
+
+    .items.active {
+        display: flex;
+        flex-direction: column;
+        position: fixed; /* fondamentale */
+        top: 0;
+        left: 0;
+        width: 100vw; /* 100% viewport width */
+        height: 100vh; /* opzionale: full screen */
+        padding: 15% 5%;
+        background: white;
+        z-index: 1001;
+    }
+
+    /* Spazio tra i link */
+    .items.active a {
+        margin: 5px 0;
+        text-decoration: none;
+        padding: 0;
+    }
+
+    #section-1 > nav > nav > nav > a.prenota-mobile > button,
+    #link-prenota > a.prenota-mobile > button {
+        margin: 0;
+    }
+
+    /* 🔥 Nasconde PRENOTA desktop */
+    .prenota-link {
+        display: none;
+    }
+
+    /* 🔥 Mostra PRENOTA mobile (primo elemento) */
+    .prenota-mobile {
+        display: block;
+        margin-bottom: 25px;
+    }
+
+    .contact-wrapper {
+        box-shadow: 0;
+    }
+    #location > div:nth-child(2) {
+        order: 1;
+    }
+    #location > div:nth-child(1) {
+        order: 2;
+    }
+    #location > div:nth-child(3) {
+        order: 3;
+    }
+    #location > div:nth-child(4) {
+        order: 4;
+    }
+    #location > div:nth-child(6) {
+        order: 5;
+    }
+    #location > div:nth-child(5) {
+        order: 6;
+    }
+    #location > div:nth-child(10) {
+        order: 7;
+    }
+    #location > div:nth-child(9) {
+        order: 8;
+    }
+    #location .gold-divider {
+        display: none;
+    }
+    hr.gold-divider {
+        margin-bottom: 0;
+    }
+
+    #descrizioni,
+    #location {
+        width: 100%;
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        opacity: 1;
+        padding: 3rem 3rem 0 3rem;
+    }
+    .cornice,
+    .cornice2 {
+        display: none;
+    }
+    .main-pic #main-pic {
+        margin-top: 0;
+    }
+    #residenza > div.detail > hr {
+        margin-top: 0;
+        margin-bottom: 5%;
+    }
+    #residenza > div.intro > h1 {
+        font-size: 32px;
+    }
+    #residenza > div.intro > h2 {
+        font-size: 26px;
+    }
+    #residenza > div.intro > p,
+    #residenza > div.detail > p,
+    #residence_description > p,
+    #residenza > div.detail-end > p {
+        font-size: 20px;
+        padding: 2%;
+    }
+
+    h2,
+    #intro-location > h2,
+    #h3-location {
+        font-size: 23px;
+        padding-bottom: 5%;
+    }
+    p,
+    #intro-location > p,
+    #location p {
+        font-size: 17px;
+    }
+
+    .descrizioni > .zoom-image:nth-of-type(2n) {
+        order: 2;
+    }
+
+    .descrizioni > .grid-item:nth-of-type(2n-1) {
+        order: 1;
+    }
+    #residence_description {
+        order: 1;
+    }
+    #descrizioni > div:nth-child(1) {
+        order: 2;
+    }
+    #descrizioni > div:nth-child(2) {
+        order: 3;
+        margin-bottom: 10px;
+    }
+    #descrizioni > div:nth-child(4) {
+        order: 4;
+    }
+    #descrizioni > div:nth-child(3) {
+        order: 5;
+        margin-bottom: 10px;
+    }
+    #residence_description:nth-child(2) {
+        order: 6;
+    }
+    #residence_description > div:nth-child(1) {
+        order: 7;
+        margin-bottom: 10px;
+    }
+    #descrizioni > div:nth-child(5) {
+        order: 11;
+    }
+    #descrizioni > div:nth-child(6) {
+        order: 12;
+        margin-bottom: 10px;
+    }
+    #descrizioni > div:nth-child(1) > hr,
+    #descrizioni > div:nth-child(4) > hr,
+    #descrizioni > div:nth-child(5) > hr {
+        display: none;
+    }
+    #gold-divider-mobile {
+        border: none;
+        height: 2px;
+        width: 50%;
+        margin: 30px auto;
+        background: linear-gradient(
+            to right,
+            transparent,
+            #c9a24d,
+            #ffd700,
+            #c9a24d,
+            transparent
+        );
+    }
+    #residenza > div.main-pic {
+        margin-top: 50px;
+    }
+    #descrizioni {
+        padding-top: 0;
+    }
 }
