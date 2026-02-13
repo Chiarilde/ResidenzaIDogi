@@ -445,6 +445,9 @@ hr #gold-divider-mobile {
     margin-bottom: 5%;
     color: #aa7f2e;
 }
+#gold-divider-mobile {
+    display: none;
+}
 
 quote {
     font-size: 24px;
