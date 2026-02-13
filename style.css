@@ -451,7 +451,7 @@ quote {
     text-align: center;
     align-items: center;
     justify-content: center;
-    font-family: "Bodoni";
+    font-family: "Bodoni Moda";
     font-style: italic;
     font-weight: bold;
     color: #aa7f2e;
@@ -738,7 +738,7 @@ footer {
 
     .contact-wrapper {
         width: 50%;
-        /* height: 400px; */
+        height: auto;
         display: flex;
         border-radius: 2%;
         box-shadow: 0 3rem 7rem rgba(0, 0, 0, 0.5);
