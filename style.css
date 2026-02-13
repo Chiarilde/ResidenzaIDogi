@@ -990,4 +990,9 @@ footer {
     #descrizioni-ristoranti > p:nth-child(9) > i {
         font-size: smaller;
     }
+    @media (max-width: 768px) {
+        .bg-image {
+            background-position: 75% center;
+        }
+    }
 }
