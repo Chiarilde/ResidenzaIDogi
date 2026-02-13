@@ -5,7 +5,7 @@
     outline: none;
     list-style-type: none;
     text-decoration: none;
-    font-family: "Bodoni", serif;
+    /* font-family: "Bodoni", serif; */
 }
 body {
     background-color: #efe6d8;
@@ -462,7 +462,7 @@ h1 {
     text-align: center;
     align-items: center;
     justify-content: center;
-    font-family: "Bodoni";
+    font-family: "Bodoni Moda";
     font-style: italic;
     color: #aa7f2e;
     margin-top: 10%;
@@ -696,6 +696,24 @@ footer {
 }
 
 /* MOBILE */
+@media (min-width: 768px) and (max-width: 1200px) {
+    .items.active a {
+        margin: 5px 0;
+        text-decoration: none;
+        padding: 0;
+        font-size: 4.5rem;
+    }
+
+    #section-1 > nav > nav > nav > a.prenota-mobile {
+        .prenota-mobile {
+            display: block;
+            margin-bottom: 25px;
+            font-size: 2rem; /* testo più grande */
+            padding: 15px 30px; /* bottone più grande */
+        }
+    }
+}
+
 @media (max-width: 900px) {
     #descrizioni-ristoranti > p:nth-child(4),
     #descrizioni-ristoranti > p:nth-child(6),
@@ -707,6 +725,23 @@ footer {
     }
     #descrizioni-ristoranti > h5 {
         padding-bottom: 0;
+    }
+    #contact > div.contact-wrapper {
+        flex-direction: column;
+        width: 100%;
+    }
+    .items.active a {
+        margin: 5px 0;
+        text-decoration: none;
+        padding: 0;
+    }
+
+    .contact-wrapper {
+        width: 50%;
+        /* height: 400px; */
+        display: flex;
+        border-radius: 2%;
+        box-shadow: 0 3rem 7rem rgba(0, 0, 0, 0.5);
     }
 }
 
@@ -740,10 +775,6 @@ footer {
         align-items: center;
         justify-content: flex-start;
         z-index: 1001;
-    }
-    #contact > div.contact-wrapper {
-        flex-direction: column;
-        width: 100%;
     }
 
     #contact > div.contact-wrapper > div.contact-left,
@@ -794,11 +825,6 @@ footer {
     }
 
     /* Spazio tra i link */
-    .items.active a {
-        margin: 5px 0;
-        text-decoration: none;
-        padding: 0;
-    }
 
     #section-1 > nav > nav > nav > a.prenota-mobile > button,
     #link-prenota > a.prenota-mobile > button {
@@ -816,9 +842,6 @@ footer {
         margin-bottom: 25px;
     }
 
-    .contact-wrapper {
-        box-shadow: 0;
-    }
     #location > div:nth-child(2) {
         order: 1;
     }
@@ -882,19 +905,23 @@ footer {
     #residence_description > p,
     #residenza > div.detail-end > p {
         font-size: 20px;
-        padding: 2%;
+        padding: 3%;
     }
 
     h2,
     #intro-location > h2,
     #h3-location {
         font-size: 23px;
-        padding-bottom: 5%;
+        padding: 0 2% 5% 2%;
     }
     p,
     #intro-location > p,
-    #location p {
-        font-size: 17px;
+    #location p,
+    #descrizioni-ristoranti > h5 {
+        font-size: 18px;
+    }
+    #descrizioni-ristoranti > h5 {
+        padding: 2%;
     }
 
     .descrizioni > .zoom-image:nth-of-type(2n) {
@@ -959,5 +986,8 @@ footer {
     }
     #descrizioni {
         padding-top: 0;
+    }
+    #descrizioni-ristoranti > p:nth-child(9) > i {
+        font-size: smaller;
     }
 }
